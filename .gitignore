@@ -1,0 +1,36 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+
+# PyCharm artifacts
+.idea/
+
+# Environment directories (commonly used names for virtual environments)
+.env
+.venv/
+env/
+venv/
+
+# OSX
+.DS_Store
+
+# Logs
+*.log
+Explanation:
+
+__pycache__/ and *.py[cod]: Python generates bytecode files that shouldn't be in the repository.
+
+.idea/: If you're using PyCharm, it creates this directory for project-specific settings.
+
+.env, .venv/, env/, venv/: Common directories for Python virtual environments.
+
+.DS_Store: A file macOS creates in every directory.
+
+*.log: Log files.
+
+This should cover most of the basics for a beginner's project. As you expand your toolset or the complexity of your project, you can always adjust and expand your .gitignore file accordingly.
+
+
+
+
+
