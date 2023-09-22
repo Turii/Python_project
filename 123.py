@@ -1,4 +1,4 @@
-def some_func(a, b):
-    return a + b
+def some_func(c, b):
+    return c + b
 
 print(some_func(3, 4))
