@@ -15,4 +15,13 @@ class People:
         else:
             print("Age can't be negative")
 
+
+class Animal:
+    pass
+
+
+cat =Animal()
+cat.name = "Mario"
+cat.age = 4
+
 # 5.2. Создайте репозиторий на Github и отправьте файл с домашним заданием в этот удаленный репозиторий
