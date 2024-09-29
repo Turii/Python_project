@@ -69,7 +69,8 @@ def test_sortAZ(login_user):
 
     current_selection = driver.find_element(By.CSS_SELECTOR, ".active_option").text
     if (current_selection == "Name (A to Z)"):
-        products_items_main_page = driver.find_elements(By.XPATH, "//div[@class = 'inventory_item_name']")
+        # products_items_main_page = driver.find_elements(By.XPATH, "//div[@class = 'inventory_item_name']")//a[@id = 'item_4_img_link']
+        products_items_main_page = driver.find_elements(By.XPATH, "//div[@class = 'inventory_item_img']")
         products_items_name_main_page = [item_name.text for item_name in products_items_main_page]
         time.sleep(5)
         print("Currrrrrrentt list")
@@ -82,7 +83,8 @@ def test_sortAZ(login_user):
     else:
         dropdown = Select(driver.find_element(By.CSS_SELECTOR, ".product_sort_container"))
         dropdown.select_by_visible_text("Name (A to Z)")
-        products_items_main_page = driver.find_elements(By.XPATH, "//div[@class = 'inventory_item_name']")
+        # products_items_main_page = driver.find_elements(By.XPATH, "//div[@class = 'inventory_item_name']")
+        products_items_main_page = driver.find_elements(By.XPATH, "//div[@class = 'inventory_item_img']")
         products_items_name_main_page = [item_name.text for item_name in products_items_main_page]
         time.sleep(5)
         print("Currrrrrrentt list")

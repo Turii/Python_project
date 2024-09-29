@@ -129,3 +129,34 @@ def test_add_product(login_user):
 
     time.sleep(5)
     driver.quit()
+
+
+def test_burger_menu(login_user):
+    driver.get(login_user)
+
+    username_field = driver.find_element(By.XPATH, '//input[@data-test="username"]')
+    username_field.send_keys("standard_user")
+
+    password_field = driver.find_element(By.XPATH, '//input[@data-test="password"]')
+    password_field.send_keys("secret_sauce")
+
+    login_button = driver.find_element(By.XPATH, '//input[@data-test="login-button"]')
+    login_button.click()
+
+    burger_menu_button = driver.find_element(By.ID, "react-burger-menu-btn")
+    burger_menu_button.click()
+
+    burger_menu_about = driver.find_element(By.ID, "about_sidebar_link")
+    burger_menu_about.click()
+
+    assert driver.current_url == "https://saucelabs.com/"
+    assert driver.title == "Sauce Labs: Cross Browser Testing, Selenium Testing & Mobile Testing"
+    assert "Sauce Labs" in driver.title
+
+    driver.back()
+
+    assert driver.current_url == login_user
+    burger_menu_button = driver.find_element(By.ID, "react-burger-menu-btn")
+    burger_menu_button.click()
+
+    driver.quit()
