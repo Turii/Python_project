@@ -66,7 +66,7 @@ def factorial(n):
 
 
 def generate_random_list(n):
-    return [random.randint(1, n) for _ range(n)]
+    return [random.randint(1, n) for _ in range(n)]
 
 
 def bubble_sort(array):

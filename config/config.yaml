@@ -1,0 +1,9 @@
+api:
+  base_url: "https://restful-booker.herokuapp.com"
+  username: "admin"
+  password: "password123"
+
+ui:
+  base_url: "https://www.saucedemo.com/"
+  username: "your_username"
+  password: "your_password"
