@@ -39,3 +39,4 @@ python-dotenv==1.0.0
 # Я планую запускати тести на CI (GitHub Actions) або в Docker
 # webdriver-manager автоматично качає драйвери (наприклад, chromedriver)
 webdriver-manager==4.0.0
+pyyaml==6.0.1
